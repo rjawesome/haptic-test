@@ -53,12 +53,13 @@ class MainActivity : AppCompatActivity() {
 
     private fun vibrate (vibrations: Long, vibrationTime: Long) {
         var count = 0
+        val interval = vibrationTime + 1000 //in milliseconds
 
         //Disable Vibrate Button
         setButtonsEnabled(false)
 
-        //Timer to vibrate every 1 second
-        object : CountDownTimer(vibrations * 1000, 1000) {
+        //Timer to vibrate every at every interval
+        object : CountDownTimer(vibrations * interval, interval) {
             override fun onTick(millisUntilFinished: Long) {
                 //Increment count and update counter
                 count++
