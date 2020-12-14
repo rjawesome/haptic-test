@@ -13,8 +13,7 @@ class MainActivity : AppCompatActivity() {
     private var txt: EditText? = null
 
     //Submit Buttons
-    private var btnLong: Button? = null
-    private var btnShort: Button? = null
+    private var btn: Button? = null
 
     //Counter Text
     private var counter: TextView? = null
@@ -28,8 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         //Get Widgets from Layout
         txt = findViewById(R.id.input)
-        btnShort = findViewById(R.id.button_short)
-        btnLong = findViewById(R.id.button_long)
+        btn = findViewById(R.id.button_short)
         counter = findViewById(R.id.counter)
 
         //Get Vibrator Service
@@ -80,9 +78,7 @@ class MainActivity : AppCompatActivity() {
 
     //Enables/Disables Buttons
     private fun setButtonsEnabled (state: Boolean) {
-        btnShort?.isEnabled = state
-        btnShort?.isClickable = state
-        btnLong?.isEnabled = state
-        btnLong?.isClickable = state
+        btn?.isEnabled = state
+        btn?.isClickable = state
     }
 }
